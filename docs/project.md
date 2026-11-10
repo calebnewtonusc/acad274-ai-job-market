@@ -52,3 +52,24 @@ is what makes the join possible. None of these are verified yet.
 
 Rules from the course: the class server can't take a giant file (trim or aggregate
 first), at least 100 imported rows, and every number on the site needs a citation.
+
+## What Ellen's dataset actually is (checked 2026-11-10)
+
+`data/raw/aijobs_categorized.xlsx`, cleaned copy in `data/clean/aijobs_categorized.csv`.
+831 occupations, 21 categories, keyed by SOC code (`OccupationCode`). Columns:
+employment 2025 and projected 2035 (thousands), change and percent change, annual
+openings, median wage 2025, education, experience, training, and `AIExposure`
+(Low / Moderate / High / Very high). Ellen's guide tab says it's already imported as
+`ellenjun_aijobs` with category views.
+
+Two things to settle before we build claims on it:
+
+- **Where AIExposure comes from.** The four buckets hold 213, 206, 206 and 206
+  occupations, almost exactly quarters, which looks like someone ranked a score and
+  cut it into quartiles. We need that score's source to cite it (Final Build requires
+  citations), and quartiles mean "Low" is relative, not absolute.
+- **What we join to it.** It's one table. SOC code is the key that makes the
+  "not just Googling" part possible: O*NET tasks per occupation, BLS OEWS wages by
+  state or metro, and published AI exposure scores (Felten et al. AIOE, Eloundou
+  et al.) all use SOC codes. A view joining projected growth to an independent
+  exposure score is the first real cross-dataset claim.
