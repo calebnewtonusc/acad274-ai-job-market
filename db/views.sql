@@ -1,0 +1,1 @@
+-- One CREATE VIEW per view, with a comment on what it proves.

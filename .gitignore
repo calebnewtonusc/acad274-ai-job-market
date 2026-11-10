@@ -1,0 +1,8 @@
+# database credentials never go in git
+site/api/config.php
+.env
+.DS_Store
+node_modules/
+*.log
+# big raw downloads: keep a README with the source link instead
+data/raw/*.zip

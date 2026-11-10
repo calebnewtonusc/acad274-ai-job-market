@@ -1,0 +1,19 @@
+/* The one shared stylesheet (M2 requires every page to link it).
+   Design owns this file: Keanna and Mikayla. Colors live in the variables below. */
+:root {
+  --ink: #1b1f24;
+  --paper: #f6f4ef;
+  --accent: #c2410c;
+  --muted: #6b7280;
+  --line: #d8d4ca;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Inter", Helvetica, Arial, sans-serif; color: var(--ink); background: var(--paper); line-height: 1.5; }
+header, main, footer { max-width: 1100px; margin: 0 auto; padding: 16px; }
+nav a { color: var(--ink); text-decoration: none; margin-right: 16px; border-bottom: 2px solid transparent; }
+nav a:hover, nav a.current { border-bottom-color: var(--accent); }
+table { border-collapse: collapse; width: 100%; background: #fff; }
+th { background: var(--ink); color: #fff; text-align: left; }
+th, td { padding: 6px 10px; border-bottom: 1px solid var(--line); }
+tr:hover td { background: #fff7ed; }
+.stat { font-size: 2.5rem; font-weight: 700; color: var(--accent); }
