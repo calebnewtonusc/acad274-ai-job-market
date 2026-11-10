@@ -19,6 +19,6 @@ Split those two before M2, since user research is a graded M2 deliverable.
 
 ## Who hosts what
 
-- Database: [NEED: whose iyaserver account, likely Ellen's]
+- Database: Ellen, `ellenjun_aijobs` on webdev.iyaserver.com
 - Official site for grading: [NEED: whose iyaserver account]
 - Group chat: iMessage "Making cs majors homeless"

@@ -1,6 +1,6 @@
 # Database
 
-Owner: Ellen. Hosted on [NEED: whose iyaserver account].
+Owner: Ellen. Hosted on Ellen's iyaserver account, database `ellenjun_aijobs`.
 
 - `schema.sql`: the tables, exported from phpMyAdmin (Export tab, structure only) after each change
 - `views.sql`: every view's CREATE statement, so nobody has to rebuild them by hand
