@@ -21,7 +21,7 @@ When we run it, it is showing bars for LOTS of players. What if we wanted to shi
 
 It would tell us something like:
 
-	You’re already very close — Chart.js controls vertical vs horizontal bars with the indexAxis option.
+	You’re already very close, Chart.js controls vertical vs horizontal bars with the indexAxis option.
 
 	Right now you have:
 

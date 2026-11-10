@@ -21,14 +21,18 @@ if (!empty($_GET["sortorder"]) && in_array($_GET["sortorder"], $sortable, true))
     $sql .= " ORDER BY " . $_GET["sortorder"] . " DESC";
 }
 
-if (!empty($_GET["limit"])) {
-    $sql .= " LIMIT " . intval($_GET["limit"]);
+// Only positive whole numbers, capped so nobody can ask for the whole table.
+$limit = isset($_GET["limit"]) ? intval($_GET["limit"]) : 0;
+if ($limit > 0) {
+    $sql .= " LIMIT " . min($limit, 500);
 }
 
-$results = $mysql->query($sql);
-if (!$results) {
+// PHP 8 throws on a bad query, so catch it and send JSON instead of a crash page.
+try {
+    $results = $mysql->query($sql);
+} catch (mysqli_sql_exception $e) {
     http_response_code(500);
-    echo json_encode(["error" => $mysql->error]);
+    echo json_encode(["error" => $e->getMessage()]);
     exit();
 }
 

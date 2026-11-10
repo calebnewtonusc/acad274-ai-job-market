@@ -7,8 +7,10 @@ $userid = "OWNER_site";      // e.g. ellen_site
 $userpw = "PASSWORD_HERE";
 $db     = "OWNER_aijobs";    // e.g. ellen_aijobs
 
-$mysql = new mysqli($host, $userid, $userpw, $db);
-if ($mysql->connect_errno) {
+// PHP 8 throws if the connection fails, so catch it and answer in JSON.
+try {
+    $mysql = new mysqli($host, $userid, $userpw, $db);
+} catch (mysqli_sql_exception $e) {
     http_response_code(500);
     echo json_encode(["error" => "db connection failed"]);
     exit();
