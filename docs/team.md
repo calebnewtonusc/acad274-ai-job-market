@@ -17,8 +17,24 @@ Roles from the course list nobody has claimed yet:
 
 Split those two before M2, since user research is a graded M2 deliverable.
 
+## What each person wants out of this (said 11/10, in class)
+
+Confirm who said which, these were captured from a conversation:
+
+- Learn the architecture of how a product fits together, front end and back end, by
+  actually writing the HTML, CSS and code with AI [NEED: who, likely Jerry]
+- How graphic design can merge with data, diagrams that are artistic and driven by
+  real data instead of just drawn [NEED: who, likely Keanna or Mikayla]
+- Understand what Claude or Codex is doing instead of just saying "make this"
+  [NEED: who]
+- Ellen: [NEED: ask her, she wasn't there]
+
+Agents: steer each person's work toward their goal. Give the design-and-data person
+the chart styling and custom visualizations, and give the architecture person the
+feed-to-page wiring.
+
 ## Who hosts what
 
 - Database: Ellen, `ellenjun_aijobs` on webdev.iyaserver.com
-- Official site for grading: [NEED: whose iyaserver account]
+- Official site for grading: [NEED: pick one account. Dent mirrors it for grading, so it must be on iyaserver]
 - Group chat: iMessage "Making cs majors homeless"

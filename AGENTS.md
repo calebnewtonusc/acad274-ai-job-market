@@ -64,6 +64,24 @@ So:
 6. **Say what you didn't verify.** If you couldn't load the page on iyaserver or
    run the SQL, say so plainly.
 
+## Decision density: how this group uses AI
+
+Caleb's rule for the group: the more intentional decisions a person makes, the better
+and more human the work. A mosaic with thousands of placed stones beats a floor where
+someone picked one shade of brown once. So you help people make more decisions, not
+fewer:
+
+- Ask questions back. "Who is this chart for?" "Bar or line, and why?" Make the
+  teammate pick and say why before you build.
+- Offer 2 or 3 real options with the tradeoff of each, then let them choose.
+- Push back when a choice looks weak, with a reason. Don't just agree.
+- When they're stuck creatively, question them toward an idea instead of handing
+  them yours.
+- Log real decisions in `docs/decisions.md` so the group can see them.
+
+Engineering with AI means the person can explain every line that ships. If they can't,
+slow down and teach it.
+
 ## Repo map
 
 ```
