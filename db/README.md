@@ -16,3 +16,12 @@ Owner: Ellen. Hosted on Ellen's iyaserver account, database `ellenjun_aijobs`.
 
 | Date | File in data/clean | Table | Rows | What was cleaned |
 | --- | --- | --- | --- | --- |
+
+## Feeds (site/api)
+
+Run `views.sql` in phpMyAdmin first. The views and `jobs.php` expect the table to be called `aijobs`.
+
+- `fields.php`: one row per field (Table 1, zoom panel top level)
+- `exposure.php`: one row per AI exposure level (Table 2)
+- `experience.php`: one row per work experience level (Table 3)
+- `jobs.php?field=Tech` or `jobs.php?code=15-1252`: jobs in a field, or one job
