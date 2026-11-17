@@ -19,3 +19,5 @@ One line each, newest at the bottom. Date, what, who agreed.
   expect from their major vs how grads actually end up. Second dataset still open.
 - 2026-11-17: M2 interviews: at least 2 people, same written questions for both, recorded.
   Designers mock pages in Figma, code goes in this repo with one external stylesheet.
+- 2026-11-17: Next step: everyone does 2 interviews (questions in docs/interviews.md),
+  then we reconvene, pick 2 of the 3 new data sources in data/NEW-DATA.md, and split work.
