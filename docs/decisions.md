@@ -13,3 +13,9 @@ One line each, newest at the bottom. Date, what, who agreed.
   reasons: most of the team can only work in the php they've learned, and he audits
   files on the server, not just GitHub. Decision: stay on the course stack. The group
   still needs to pick one official host account that he can mirror.
+- 2026-11-17: Dent in class: one government dataset alone mostly repeats what's already
+  out there ("how cooked is my career" sites exist). We need either a new insight from
+  combining a second dataset, or a new way of showing it. Group idea: what students
+  expect from their major vs how grads actually end up. Second dataset still open.
+- 2026-11-17: M2 interviews: at least 2 people, same written questions for both, recorded.
+  Designers mock pages in Figma, code goes in this repo with one external stylesheet.
