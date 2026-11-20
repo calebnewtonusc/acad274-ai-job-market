@@ -1,19 +1,173 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Resources | AI and the Job Market</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-<header><nav><a href="index.html">Home</a><a href="data.html">Data</a><a href="resources.html">Resources</a></nav></header>
-<main>
-  <h1>Resources</h1>
-  <p>Each source gets a link and a one-sentence summary (M2 requirement).</p>
-  <ul><li>[NEED: first source]</li></ul>
-</main>
-<footer>ACAD 274, Group 1</footer>
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Resources | AI and the Job Market</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">AI <span>and the</span> Job Market</a>
+      <nav>
+        <a href="index.html">Home</a><a href="data.html">Data</a
+        ><a class="current" href="resources.html">Resources</a>
+      </nav>
+    </header>
+    <main>
+      <p class="kicker">Seminal resources</p>
+      <h1>Where our data and framing come from</h1>
+      <p class="lede">
+        The datasets we built the tables from come first, then the research that
+        shaped how we read them. Every link was checked on 2026-11-19.
+      </p>
+
+      <h2>Datasets we use</h2>
+      <ul class="resources">
+        <li class="card">
+          <span class="type">Dataset, used in Tables 1 and 2</span>
+          <h3>
+            <a href="https://huggingface.co/datasets/Anthropic/EconomicIndex"
+              >Anthropic Economic Index dataset (Hugging Face)</a
+            >
+          </h3>
+          <p>
+            Anthropic's open data release, CC-BY. Our observed AI use column
+            comes from its
+            <code>labor_market_impacts/job_exposure.csv</code> file, a 0 to 1
+            score per occupation built from how people actually use Claude on
+            that occupation's tasks.
+          </p>
+        </li>
+        <li class="card">
+          <span class="type">Report series</span>
+          <h3>
+            <a href="https://www.anthropic.com/economic-index"
+              >The Anthropic Economic Index</a
+            >
+          </h3>
+          <p>
+            Anthropic's ongoing reports on which tasks and occupations people
+            use Claude for, and whether that use automates a task or assists a
+            person doing it.
+          </p>
+        </li>
+        <li class="card">
+          <span class="type">Dataset, used in Table 3</span>
+          <h3>
+            <a href="https://www.newyorkfed.org/research/college-labor-market"
+              >The Labor Market for Recent College Graduates (Federal Reserve
+              Bank of New York)</a
+            >
+          </h3>
+          <p>
+            Unemployment, underemployment and early and mid-career wages for 73
+            majors, for college graduates aged 22 to 27, which is where our
+            recent-grad numbers come from.
+          </p>
+        </li>
+        <li class="card">
+          <span class="type">Government data</span>
+          <h3>
+            <a href="https://www.bls.gov/emp/"
+              >Employment Projections (US Bureau of Labor Statistics)</a
+            >
+          </h3>
+          <p>
+            BLS's ten-year projections of employment, openings, wages and
+            education requirements by occupation, the format our core occupation
+            table follows.
+            <span class="need"
+              >[NEED: Ellen, confirm this is the source of the employment and
+              wage columns]</span
+            >
+          </p>
+        </li>
+        <li class="card">
+          <span class="type">Occupation database</span>
+          <h3><a href="https://www.onetonline.org/">O*NET OnLine</a></h3>
+          <p>
+            The Labor Department's database of tasks, skills and work activities
+            for each occupation, keyed by the same SOC codes as our data, so it
+            is how we could add task-level detail in M3.
+          </p>
+        </li>
+      </ul>
+
+      <h2>Research that shaped our questions</h2>
+      <ul class="resources">
+        <li class="card">
+          <span class="type">Working paper, 2023</span>
+          <h3>
+            <a href="https://arxiv.org/abs/2303.10130"
+              >Eloundou, Manning, Mishkin and Rock, "GPTs are GPTs: An Early
+              Look at the Labor Market Impact Potential of Large Language
+              Models"</a
+            >
+          </h3>
+          <p>
+            Rates occupations by how well their tasks line up with LLM
+            capabilities and finds around 80% of US workers could have at least
+            10% of their tasks affected, with higher-income jobs facing more
+            exposure.
+          </p>
+        </li>
+        <li class="card">
+          <span class="type">Working paper, 2023</span>
+          <h3>
+            <a href="https://arxiv.org/abs/2303.01157"
+              >Felten, Raj and Seamans, "How will Language Modelers like ChatGPT
+              Affect Occupations and Industries?"</a
+            >
+          </h3>
+          <p>
+            Builds an exposure measure for language AI across occupations,
+            industries and places, and finds telemarketers and many
+            postsecondary teachers most exposed and a positive link between
+            wages and exposure.
+          </p>
+        </li>
+        <li class="card">
+          <span class="type">Working paper, revised August 2026</span>
+          <h3>
+            <a
+              href="https://digitaleconomy.stanford.edu/publications/canaries-in-the-coal-mine/"
+              >Brynjolfsson, Chandar and Chen, "Canaries in the Coal Mine? Six
+              Facts about the Recent Employment Effects of Artificial
+              Intelligence"</a
+            >
+          </h3>
+          <p>
+            Using ADP payroll data through June 2026, finds no economy-wide
+            displacement, but employment of workers aged 22 to 25 in AI-exposed
+            occupations sits 19% below where it would be had it kept pace with
+            less-exposed peers, mostly through less hiring.
+          </p>
+        </li>
+        <li class="card">
+          <span class="type">Survey, 2026</span>
+          <h3>
+            <a
+              href="https://news.gallup.com/poll/704087/college-students-weigh-impact-majors-careers.aspx"
+              >Gallup and Lumina Foundation, "College Students Weigh AI's Impact
+              on Majors and Careers"</a
+            >
+          </h3>
+          <p>
+            A survey of 3,801 US college students in October 2025, in which 16%
+            say they have already changed their major or field of study because
+            of AI's potential impact.
+          </p>
+        </li>
+      </ul>
+
+      <p class="sub">
+        <span class="need"
+          >[NEED: group, add any sources from Mikayla's M2 doc or the M0 pitch
+          (Forbes, YCharts) once their links are checked]</span
+        >
+      </p>
+    </main>
+    <footer>ACAD 274, Fall 2026, Group 1. Draft for Milestone 2.</footer>
+  </body>
 </html>
