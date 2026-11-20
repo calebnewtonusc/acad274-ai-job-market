@@ -1,13 +1,31 @@
+/* The one shared stylesheet (M2 requires every page to link it).
+   Design owns this file: Keanna and Mikayla. Colors live in the variables below. */
 /* The one shared stylesheet. Every page links this file and nothing else for styling.
    Design owns this file: Keanna and Mikayla. Colors live in the variables below,
    so a new palette is a change to :root only. */
+
+@font-face {
+    font-family:"Museo Moderno";
+    src: url(MuseoModerno/MuseoModerno-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family:"Glacial Indifference";
+    src: url(glacial-indifference/GlacialIndifference-Regular.otf);
+}
+@font-face {
+    font-family:"Glacial Indifference";
+    src: url(glacial-indifference/GlacialIndifference-Bold.otf);
+    font-weight:bold;
+}
+   
 :root {
-  --ink: #1b1f24;
+  --ink: #562111;
   --paper: #f6f4ef;
   --card: #ffffff;
   --accent: #c2410c;
-  --accent-soft: #fff1e8;
-  --muted: #5f6672;
+  --muted: #d07345;
+  --line: #d8d4ca;
+  --accent-soft: #ffe0cd;
   --line: #e2ddd2;
   --shadow: 0 1px 2px rgba(27, 31, 36, 0.05), 0 8px 24px rgba(27, 31, 36, 0.06);
   /* AI exposure ramp, Low to Very high. Charts read these through getComputedStyle. */
@@ -17,6 +35,16 @@
   --lvl-veryhigh: #9a3412;
   --series-2: #334155;
 }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Inter", Helvetica, Arial, sans-serif; color: var(--ink); background: var(--paper); line-height: 1.5; }
+header, main, footer { max-width: 1100px; margin: 0 auto; padding: 16px; }
+nav a { color: var(--ink); text-decoration: none; margin-right: 16px; border-bottom: 2px solid transparent; }
+nav a:hover, nav a.current { border-bottom-color: var(--accent); }
+table { border-collapse: collapse; width: 100%; background: #fff; }
+th { background: var(--ink); color: #fff; text-align: left; }
+th, td { padding: 6px 10px; border-bottom: 1px solid var(--line); }
+tr:hover td { background: #fff7ed; }
+.stat { font-size: 2.5rem; font-weight: 700; color: var(--accent); }
 
 * {
   box-sizing: border-box;
@@ -24,11 +52,9 @@
 
 body {
   margin: 0;
-  font-family: "Inter", Helvetica, Arial, sans-serif;
+  font-family: "Glacial Indifference", Helvetica, Arial, sans-serif;
   color: var(--ink);
-  background:
-    radial-gradient(900px 420px at 0% -10%, var(--accent-soft), transparent),
-    var(--paper);
+  background: linear-gradient(#fffbfc, #ffb074);
   line-height: 1.55;
 }
 
@@ -86,15 +112,19 @@ nav a.current {
 /* Type */
 h1 {
   font-size: clamp(1.9rem, 4.2vw, 2.9rem);
+  font-family:"Museo Moderno";
   line-height: 1.12;
-  letter-spacing: -0.02em;
+  letter-spacing: 2px;
   margin: 24px 0 12px;
   max-width: 22ch;
+  color:#f66b26;
 }
 h2 {
   font-size: clamp(1.3rem, 2.4vw, 1.7rem);
   letter-spacing: -0.01em;
+  font-family:"Museo Moderno";
   margin: 40px 0 8px;
+  color:rgb(171, 22, 44);
 }
 h3 {
   font-size: 1.05rem;
@@ -102,10 +132,11 @@ h3 {
 }
 p {
   margin: 0 0 14px;
+  color:#562111;
 }
 .lede {
   font-size: 1.15rem;
-  color: var(--muted);
+  color:(var(--muted));
   max-width: 62ch;
 }
 .sub {
