@@ -1,22 +1,412 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Data | AI and the Job Market</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-<header><nav><a href="index.html">Home</a><a href="data.html">Data</a><a href="resources.html">Resources</a></nav></header>
-<main>
-  <h1>Data</h1>
-  <p>M2 needs three tables with three visualizations each.</p>
-  <div id="results">Loading . . .</div>
-  <canvas id="myChart"></canvas>
-</main>
-<footer>ACAD 274, Group 1</footer>
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-<script src="js/data.js"></script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Data | AI and the Job Market</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">AI <span>and the</span> Job Market</a>
+      <nav>
+        <a href="index.html">Home</a><a class="current" href="data.html">Data</a
+        ><a href="resources.html">Resources</a>
+      </nav>
+    </header>
+    <main>
+      <p class="kicker">Milestone 2 data</p>
+      <h1>Three tables, nine charts</h1>
+      <p class="lede">
+        Every number below is computed from our three cleaned CSVs by
+        <code>tools/build.py</code>: Ellen's 831-occupation dataset, Anthropic's
+        observed AI use by job, and the NY Fed's recent-grad outcomes by major.
+        Tables 1 and 2 use the same math as our database views, so they match
+        what <code>exposure.php</code> and <code>fields.php</code> return.
+      </p>
+
+      <!-- ============ TABLE 1 ============ -->
+      <section class="section-head" id="t1">
+        <p class="kicker">Table 1</p>
+        <h2>
+          By AI exposure level: does the rating line up with growth, pay and
+          real use?
+        </h2>
+        <p>
+          Occupations rated High and Very high pay more on average than Low and Moderate ones, and no level is projected to shrink on average. Observed use stays at 0.060 or below from Low through High, then jumps to 0.241 at Very high.
+        </p>
+      </section>
+      <!-- TABLE:exposure -->
+<div class="tbl"><table>
+<caption>Table 1. 831 occupations grouped by their AI exposure rating. Same columns as exposure.php.</caption>
+<thead><tr><th scope="col">AI exposure (gov rating)</th><th scope="col">Occupations</th><th scope="col">Employment 2025 (thousands)</th><th scope="col">Avg projected change 2025 to 2035</th><th scope="col">Avg median wage 2025</th><th scope="col">Avg observed AI use (0 to 1)</th></tr></thead>
+<tbody>
+<tr><td>Low</td><td>213</td><td>30,264.7</td><td>+0.2%</td><td>$58,130</td><td>0.001 <span class="sub">(201 jobs)</span></td></tr>
+<tr><td>Moderate</td><td>206</td><td>44,651.3</td><td>+2.8%</td><td>$69,557</td><td>0.008 <span class="sub">(184 jobs)</span></td></tr>
+<tr><td>High</td><td>206</td><td>42,142.0</td><td>+3.4%</td><td>$89,570</td><td>0.060 <span class="sub">(180 jobs)</span></td></tr>
+<tr><td>Very high</td><td>206</td><td>53,209.2</td><td>+2.0%</td><td>$83,285</td><td>0.241 <span class="sub">(190 jobs)</span></td></tr>
+</tbody></table></div>
+<!-- /TABLE:exposure -->
+      <div class="charts">
+        <div class="card">
+          <h3>1a. Average projected change, 2025 to 2035</h3>
+          <div class="chart-box">
+            <canvas
+              id="c1a"
+              role="img"
+              aria-label="Bar chart of average projected employment change by exposure level"
+            ></canvas>
+          </div>
+        </div>
+        <div class="card">
+          <h3>1b. Share of 2025 employment</h3>
+          <div class="chart-box">
+            <canvas
+              id="c1b"
+              role="img"
+              aria-label="Doughnut chart of 2025 employment by exposure level"
+            ></canvas>
+          </div>
+        </div>
+        <div class="card">
+          <h3>1c. Observed AI use and median wage</h3>
+          <div class="chart-box">
+            <canvas
+              id="c1c"
+              role="img"
+              aria-label="Line chart of observed AI use and median wage by exposure level"
+            ></canvas>
+          </div>
+          <p class="chart-note">
+            Two axes: observed use (left, 0 to 1) and average median wage
+            (right).
+          </p>
+        </div>
+      </div>
+
+      <!-- ============ TABLE 2 ============ -->
+      <section class="section-head" id="t2">
+        <p class="kicker">Table 2</p>
+        <h2>By job field: where the prediction and real use split</h2>
+        <p>
+          Engineering and Architecture has 97.2% of its occupations rated High
+          or Very high but an average observed use of 0.038. Tech is rated the
+          same and sits at 0.369.
+        </p>
+      </section>
+      <!-- TABLE:fields -->
+<div class="tbl"><table>
+<caption>Table 2. The 21 job fields, sorted by share of occupations rated High or Very high. Same columns as fields.php.</caption>
+<thead><tr><th scope="col">Field</th><th scope="col">Occupations</th><th scope="col">Employment 2025 (thousands)</th><th scope="col">Rated High or Very high</th><th scope="col">Avg observed AI use (0 to 1)</th><th scope="col">Avg projected change</th><th scope="col">Avg median wage</th></tr></thead>
+<tbody>
+<tr><td>Legal</td><td>8</td><td>1,445.8</td><td>100.0%</td><td>0.216 <span class="sub">(7 jobs)</span></td><td>+2.1%</td><td>$95,703</td></tr>
+<tr><td>Tech</td><td>22</td><td>6,179.6</td><td>100.0%</td><td>0.369 <span class="sub">(22 jobs)</span></td><td>+8.0%</td><td>$112,399</td></tr>
+<tr><td>Engineering & Architecture</td><td>36</td><td>2,690.2</td><td>97.2%</td><td>0.038 <span class="sub">(34 jobs)</span></td><td>+4.7%</td><td>$96,064</td></tr>
+<tr><td>Business & Finance</td><td>32</td><td>11,368.5</td><td>96.9%</td><td>0.177 <span class="sub">(29 jobs)</span></td><td>+4.1%</td><td>$80,950</td></tr>
+<tr><td>Education</td><td>68</td><td>10,636.8</td><td>95.6%</td><td>0.125 <span class="sub">(60 jobs)</span></td><td>+2.0%</td><td>$77,433</td></tr>
+<tr><td>Sales</td><td>22</td><td>14,533.1</td><td>95.5%</td><td>0.236 <span class="sub">(20 jobs)</span></td><td>-1.5%</td><td>$58,511</td></tr>
+<tr><td>Community & Social Services</td><td>17</td><td>3,270.1</td><td>94.1%</td><td>0.052 <span class="sub">(12 jobs)</span></td><td>+6.5%</td><td>$58,293</td></tr>
+<tr><td>Management</td><td>24</td><td>11,002.9</td><td>91.7%</td><td>0.104 <span class="sub">(24 jobs)</span></td><td>+4.7%</td><td>$125,386</td></tr>
+<tr><td>Science</td><td>48</td><td>1,628.5</td><td>91.7%</td><td>0.122 <span class="sub">(46 jobs)</span></td><td>+5.5%</td><td>$90,901</td></tr>
+<tr><td>Office & Administration</td><td>54</td><td>18,792.5</td><td>88.9%</td><td>0.191 <span class="sub">(50 jobs)</span></td><td>-6.0%</td><td>$49,274</td></tr>
+<tr><td>Entertainment & Media</td><td>55</td><td>3,876.2</td><td>67.3%</td><td>0.121 <span class="sub">(44 jobs)</span></td><td>+1.4%</td><td>$66,864</td></tr>
+<tr><td>Healthcare</td><td>89</td><td>19,294.5</td><td>37.1%</td><td>0.043 <span class="sub">(82 jobs)</span></td><td>+8.2%</td><td>$137,979</td></tr>
+<tr><td>Personal Care & Services</td><td>23</td><td>3,809.4</td><td>26.1%</td><td>0.023 <span class="sub">(20 jobs)</span></td><td>+4.6%</td><td>$44,825</td></tr>
+<tr><td>Public Safety</td><td>24</td><td>3,871.4</td><td>25.0%</td><td>0.012 <span class="sub">(21 jobs)</span></td><td>+1.5%</td><td>$62,203</td></tr>
+<tr><td>Cleaning & Grounds</td><td>10</td><td>5,699.6</td><td>20.0%</td><td>0.025 <span class="sub">(8 jobs)</span></td><td>+3.4%</td><td>$45,248</td></tr>
+<tr><td>Food & Hospitality</td><td>19</td><td>14,225.6</td><td>15.8%</td><td>0.015 <span class="sub">(17 jobs)</span></td><td>+3.7%</td><td>$41,037</td></tr>
+<tr><td>Transportation & Logistics</td><td>50</td><td>14,139.2</td><td>10.0%</td><td>0.006 <span class="sub">(44 jobs)</span></td><td>+3.0%</td><td>$61,913</td></tr>
+<tr><td>Installation & Repair</td><td>51</td><td>6,494.1</td><td>5.9%</td><td>0.007 <span class="sub">(50 jobs)</span></td><td>+3.2%</td><td>$61,256</td></tr>
+<tr><td>Manufacturing</td><td>105</td><td>8,780.2</td><td>3.8%</td><td>0.008 <span class="sub">(98 jobs)</span></td><td>-4.4%</td><td>$50,839</td></tr>
+<tr><td>Construction</td><td>60</td><td>7,492.9</td><td>1.7%</td><td>0.004 <span class="sub">(56 jobs)</span></td><td>+1.4%</td><td>$58,169</td></tr>
+<tr><td>Agriculture & Forestry</td><td>14</td><td>1,036.1</td><td>0.0%</td><td>0.002 <span class="sub">(11 jobs)</span></td><td>-1.2%</td><td>$45,594</td></tr>
+</tbody></table></div>
+<!-- /TABLE:fields -->
+      <div class="charts">
+        <div class="card">
+          <h3>2a. Share of occupations rated High or Very high</h3>
+          <div class="chart-box tall">
+            <canvas
+              id="c2a"
+              role="img"
+              aria-label="Horizontal bar chart of high exposure share by field"
+            ></canvas>
+          </div>
+        </div>
+        <div class="card">
+          <h3>2b. Exposure mix in each field</h3>
+          <div class="chart-box tall">
+            <canvas
+              id="c2b"
+              role="img"
+              aria-label="Stacked bar chart of exposure levels within each field"
+            ></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>
+          2c. Predicted exposure vs observed use, sized by 2025 employment
+        </h3>
+        <div class="chart-box tall">
+          <canvas
+            id="c2c"
+            role="img"
+            aria-label="Bubble chart of predicted exposure against observed AI use by field"
+          ></canvas>
+        </div>
+        <p class="chart-note">
+          Caleb's 13b bubble chart is the same idea and could replace this one;
+          it averages observed use weighted by employment over joined
+          occupations only, so its numbers differ slightly from this table (Tech
+          33.2% there, 0.369 here).
+        </p>
+      </div>
+
+      <!-- ============ TABLE 3 ============ -->
+      <section class="section-head" id="t3">
+        <p class="kicker">Table 3</p>
+        <h2>By college major: how recent grads are doing</h2>
+        <p>
+          Recent grads aged 22 to 27. Computer Science (7.0%) and Computer
+          Engineering (7.8%) sit near the top of the unemployment list, while
+          their underemployment is among the lowest. The mapped-field column is
+          our own call and still needs a group check.
+        </p>
+      </section>
+      <!-- TABLE:majors -->
+<div class="tbl"><table>
+<caption>Table 3. 73 majors from the NY Fed, sorted by recent-grad unemployment, joined to Table 2 through our field mapping.</caption>
+<thead><tr><th scope="col">Major</th><th scope="col">Mapped field (our call)</th><th scope="col">Unemployment, grads 22 to 27</th><th scope="col">Underemployment</th><th scope="col">Median wage early career</th><th scope="col">Median wage mid career</th><th scope="col">Field rated High or Very high</th></tr></thead>
+<tbody>
+<tr><td>Anthropology</td><td>Science</td><td>7.9%</td><td>55.3%</td><td>$45,000</td><td>$65,000</td><td>91.7%</td></tr>
+<tr><td>Computer Engineering</td><td>Tech</td><td>7.8%</td><td>15.8%</td><td>$90,000</td><td>$131,000</td><td>100.0%</td></tr>
+<tr><td>Fine Arts</td><td>Entertainment & Media</td><td>7.7%</td><td>58.9%</td><td>$45,000</td><td>$72,000</td><td>67.3%</td></tr>
+<tr><td>Computer Science</td><td>Tech</td><td>7.0%</td><td>19.1%</td><td>$87,000</td><td>$120,000</td><td>100.0%</td></tr>
+<tr><td>Performing Arts</td><td>Entertainment & Media</td><td>7.0%</td><td>63.9%</td><td>$44,000</td><td>$75,000</td><td>67.3%</td></tr>
+<tr><td>Architecture</td><td>Engineering & Architecture</td><td>6.8%</td><td>25.7%</td><td>$60,000</td><td>$91,000</td><td>97.2%</td></tr>
+<tr><td>Art History</td><td>Entertainment & Media</td><td>6.7%</td><td>45.3%</td><td>$45,000</td><td>$91,000</td><td>67.3%</td></tr>
+<tr><td>Early Childhood Education</td><td>Education</td><td>6.6%</td><td>22.3%</td><td>$45,000</td><td>$52,000</td><td>95.6%</td></tr>
+<tr><td>Physics</td><td>Science</td><td>6.6%</td><td>29.1%</td><td>$67,000</td><td>$105,000</td><td>91.7%</td></tr>
+<tr><td>Environmental Studies</td><td>Science</td><td>6.3%</td><td>50.5%</td><td>$50,000</td><td>$80,000</td><td>91.7%</td></tr>
+<tr><td>Medical Technicians</td><td>Healthcare</td><td>6.2%</td><td>47.0%</td><td>$62,000</td><td>$80,000</td><td>37.1%</td></tr>
+<tr><td>English Language</td><td>Entertainment & Media</td><td>6.1%</td><td>48.5%</td><td>$48,000</td><td>$76,000</td><td>67.3%</td></tr>
+<tr><td>International Affairs</td><td>Legal</td><td>6.1%</td><td>45.2%</td><td>$64,000</td><td>$90,000</td><td>100.0%</td></tr>
+<tr><td>Information Systems & Management</td><td>Tech</td><td>6.0%</td><td>25.6%</td><td>$67,000</td><td>$100,000</td><td>100.0%</td></tr>
+<tr><td>Mathematics</td><td>Science</td><td>5.8%</td><td>26.2%</td><td>$70,000</td><td>$100,000</td><td>91.7%</td></tr>
+<tr><td>Advertising and Public Relations</td><td>Sales</td><td>5.7%</td><td>38.1%</td><td>$60,000</td><td>$92,000</td><td>95.5%</td></tr>
+<tr><td>Commercial Art & Graphic Design</td><td>Entertainment & Media</td><td>5.7%</td><td>37.1%</td><td>$50,000</td><td>$80,000</td><td>67.3%</td></tr>
+<tr><td>Pharmacy</td><td>Healthcare</td><td>5.6%</td><td>30.5%</td><td>$40,000</td><td>$85,000</td><td>37.1%</td></tr>
+<tr><td>Mass Media</td><td>Entertainment & Media</td><td>5.2%</td><td>52.1%</td><td>$50,000</td><td>$80,000</td><td>67.3%</td></tr>
+<tr><td>Philosophy</td><td>no clean match</td><td>5.1%</td><td>47.1%</td><td>$52,000</td><td>$80,000</td><td>n/a</td></tr>
+<tr><td>Psychology</td><td>Community & Social Services</td><td>5.0%</td><td>48.3%</td><td>$45,000</td><td>$72,000</td><td>94.1%</td></tr>
+<tr><td>Business Analytics</td><td>Business & Finance</td><td>5.0%</td><td>28.7%</td><td>$72,000</td><td>$109,000</td><td>96.9%</td></tr>
+<tr><td>Ethnic Studies</td><td>Community & Social Services</td><td>4.9%</td><td>49.6%</td><td>$52,000</td><td>$90,000</td><td>94.1%</td></tr>
+<tr><td>Chemical Engineering</td><td>Engineering & Architecture</td><td>4.7%</td><td>17.9%</td><td>$85,000</td><td>$135,000</td><td>97.2%</td></tr>
+<tr><td>Sociology</td><td>Community & Social Services</td><td>4.6%</td><td>52.0%</td><td>$49,900</td><td>$79,000</td><td>94.1%</td></tr>
+<tr><td>General Engineering</td><td>Engineering & Architecture</td><td>4.5%</td><td>31.1%</td><td>$75,000</td><td>$105,000</td><td>97.2%</td></tr>
+<tr><td>Nutrition Sciences</td><td>Healthcare</td><td>4.5%</td><td>48.3%</td><td>$50,000</td><td>$70,000</td><td>37.1%</td></tr>
+<tr><td>Political Science</td><td>Legal</td><td>4.5%</td><td>48.7%</td><td>$52,000</td><td>$100,000</td><td>100.0%</td></tr>
+<tr><td>Mechanical Engineering</td><td>Engineering & Architecture</td><td>4.4%</td><td>20.1%</td><td>$80,000</td><td>$120,000</td><td>97.2%</td></tr>
+<tr><td>Miscellaneous Biological Science</td><td>Science</td><td>4.4%</td><td>46.9%</td><td>$46,000</td><td>$80,000</td><td>91.7%</td></tr>
+<tr><td>Marketing</td><td>Sales</td><td>4.4%</td><td>49.3%</td><td>$60,000</td><td>$100,000</td><td>95.5%</td></tr>
+<tr><td>Family and Consumer Sciences</td><td>Personal Care & Services</td><td>4.3%</td><td>45.6%</td><td>$48,000</td><td>$65,000</td><td>26.1%</td></tr>
+<tr><td>Biology</td><td>Science</td><td>4.3%</td><td>51.1%</td><td>$45,000</td><td>$83,000</td><td>91.7%</td></tr>
+<tr><td>Chemistry</td><td>Science</td><td>4.3%</td><td>42.8%</td><td>$50,000</td><td>$86,000</td><td>91.7%</td></tr>
+<tr><td>General Business</td><td>Business & Finance</td><td>4.3%</td><td>50.4%</td><td>$60,000</td><td>$90,000</td><td>96.9%</td></tr>
+<tr><td>History</td><td>Education</td><td>4.3%</td><td>50.1%</td><td>$47,500</td><td>$80,000</td><td>95.6%</td></tr>
+<tr><td>Industrial Engineering</td><td>Engineering & Architecture</td><td>4.2%</td><td>31.7%</td><td>$83,000</td><td>$100,000</td><td>97.2%</td></tr>
+<tr><td>Communications</td><td>Entertainment & Media</td><td>3.9%</td><td>53.0%</td><td>$52,000</td><td>$88,000</td><td>67.3%</td></tr>
+<tr><td>Interdisciplinary Studies</td><td>no clean match</td><td>3.9%</td><td>45.2%</td><td>$52,000</td><td>$80,000</td><td>n/a</td></tr>
+<tr><td>Liberal Arts</td><td>no clean match</td><td>3.8%</td><td>54.6%</td><td>$45,000</td><td>$75,000</td><td>n/a</td></tr>
+<tr><td>Earth Sciences</td><td>Science</td><td>3.8%</td><td>31.4%</td><td>$50,000</td><td>$75,000</td><td>91.7%</td></tr>
+<tr><td>Health Services</td><td>Healthcare</td><td>3.8%</td><td>45.1%</td><td>$50,000</td><td>$67,000</td><td>37.1%</td></tr>
+<tr><td>Business Management</td><td>Management</td><td>3.8%</td><td>52.6%</td><td>$56,000</td><td>$82,000</td><td>91.7%</td></tr>
+<tr><td>Miscellaneous Engineering</td><td>Engineering & Architecture</td><td>3.7%</td><td>26.4%</td><td>$75,000</td><td>$105,000</td><td>97.2%</td></tr>
+<tr><td>Criminal Justice</td><td>Public Safety</td><td>3.6%</td><td>65.8%</td><td>$50,000</td><td>$80,000</td><td>25.0%</td></tr>
+<tr><td>Miscellaneous Technologies</td><td>Installation & Repair</td><td>3.6%</td><td>49.0%</td><td>$54,000</td><td>$96,000</td><td>5.9%</td></tr>
+<tr><td>Economics</td><td>Business & Finance</td><td>3.5%</td><td>33.1%</td><td>$72,000</td><td>$115,000</td><td>96.9%</td></tr>
+<tr><td>Electrical Engineering</td><td>Engineering & Architecture</td><td>3.2%</td><td>21.1%</td><td>$82,000</td><td>$123,000</td><td>97.2%</td></tr>
+<tr><td>Theology and Religion</td><td>Community & Social Services</td><td>3.1%</td><td>47.5%</td><td>$41,600</td><td>$66,000</td><td>94.1%</td></tr>
+<tr><td>Finance</td><td>Business & Finance</td><td>2.8%</td><td>27.8%</td><td>$70,000</td><td>$112,000</td><td>96.9%</td></tr>
+<tr><td>Biochemistry</td><td>Science</td><td>2.7%</td><td>42.0%</td><td>$52,000</td><td>$100,000</td><td>91.7%</td></tr>
+<tr><td>Leisure and Hospitality</td><td>Food & Hospitality</td><td>2.7%</td><td>58.1%</td><td>$45,000</td><td>$75,000</td><td>15.8%</td></tr>
+<tr><td>General Education</td><td>Education</td><td>2.6%</td><td>28.1%</td><td>$45,000</td><td>$56,000</td><td>95.6%</td></tr>
+<tr><td>Treatment Therapy</td><td>Healthcare</td><td>2.6%</td><td>39.1%</td><td>$50,000</td><td>$70,000</td><td>37.1%</td></tr>
+<tr><td>Accounting</td><td>Business & Finance</td><td>2.6%</td><td>21.2%</td><td>$68,000</td><td>$97,000</td><td>96.9%</td></tr>
+<tr><td>Animal and Plant Sciences</td><td>Agriculture & Forestry</td><td>2.5%</td><td>53.5%</td><td>$46,600</td><td>$79,000</td><td>0.0%</td></tr>
+<tr><td>Miscellaneous Physical Sciences</td><td>Science</td><td>2.5%</td><td>22.5%</td><td>$60,000</td><td>$81,000</td><td>91.7%</td></tr>
+<tr><td>Journalism</td><td>Entertainment & Media</td><td>2.3%</td><td>43.3%</td><td>$49,000</td><td>$87,000</td><td>67.3%</td></tr>
+<tr><td>Civil Engineering</td><td>Engineering & Architecture</td><td>2.3%</td><td>15.6%</td><td>$75,000</td><td>$115,000</td><td>97.2%</td></tr>
+<tr><td>General Social Sciences</td><td>Community & Social Services</td><td>2.3%</td><td>38.0%</td><td>$45,200</td><td>$75,000</td><td>94.1%</td></tr>
+<tr><td>Aerospace Engineering</td><td>Engineering & Architecture</td><td>2.2%</td><td>14.7%</td><td>$85,000</td><td>$130,000</td><td>97.2%</td></tr>
+<tr><td>Public Policy and Law</td><td>Legal</td><td>2.2%</td><td>45.5%</td><td>$55,000</td><td>$80,000</td><td>100.0%</td></tr>
+<tr><td>Construction Services</td><td>Construction</td><td>2.2%</td><td>17.9%</td><td>$75,000</td><td>$120,000</td><td>1.7%</td></tr>
+<tr><td>Secondary Education</td><td>Education</td><td>2.1%</td><td>21.7%</td><td>$45,300</td><td>$62,000</td><td>95.6%</td></tr>
+<tr><td>Nursing</td><td>Healthcare</td><td>2.1%</td><td>12.8%</td><td>$70,000</td><td>$87,000</td><td>37.1%</td></tr>
+<tr><td>Social Services</td><td>Community & Social Services</td><td>1.9%</td><td>30.1%</td><td>$43,000</td><td>$60,000</td><td>94.1%</td></tr>
+<tr><td>Engineering Technologies</td><td>Engineering & Architecture</td><td>1.7%</td><td>44.4%</td><td>$65,000</td><td>$104,000</td><td>97.2%</td></tr>
+<tr><td>Foreign Language</td><td>Education</td><td>1.6%</td><td>54.0%</td><td>$48,000</td><td>$77,000</td><td>95.6%</td></tr>
+<tr><td>Geography</td><td>Science</td><td>1.6%</td><td>43.0%</td><td>$50,000</td><td>$88,000</td><td>91.7%</td></tr>
+<tr><td>Agriculture</td><td>Agriculture & Forestry</td><td>1.4%</td><td>57.1%</td><td>$56,000</td><td>$80,000</td><td>0.0%</td></tr>
+<tr><td>Elementary Education</td><td>Education</td><td>1.2%</td><td>16.2%</td><td>$45,000</td><td>$55,000</td><td>95.6%</td></tr>
+<tr><td>Miscellaneous Education</td><td>Education</td><td>1.1%</td><td>24.5%</td><td>$48,000</td><td>$60,000</td><td>95.6%</td></tr>
+<tr><td>Special Education</td><td>Education</td><td>0.7%</td><td>16.0%</td><td>$46,000</td><td>$56,000</td><td>95.6%</td></tr>
+<tr><td><strong>All majors</strong></td><td></td><td>4.2%</td><td>39.4%</td><td>$58,000</td><td>$87,000</td><td></td></tr>
+</tbody></table></div>
+<!-- /TABLE:majors -->
+      <div class="charts">
+        <div class="card">
+          <h3>3a. Highest recent-grad unemployment</h3>
+          <div class="chart-box tall">
+            <canvas
+              id="c3a"
+              role="img"
+              aria-label="Horizontal bar chart of the 15 majors with the highest unemployment"
+            ></canvas>
+          </div>
+        </div>
+        <div class="card">
+          <h3>3b. Unemployment vs underemployment, all 73 majors</h3>
+          <div class="chart-box tall">
+            <canvas
+              id="c3b"
+              role="img"
+              aria-label="Scatter plot of unemployment against underemployment by major"
+            ></canvas>
+          </div>
+          <p class="chart-note">
+            Dashed lines mark the all-majors rates (4.2% and 39.4%).
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <h3>
+          3c. Early vs mid-career median wage, 12 highest-paid majors at the
+          start
+        </h3>
+        <div class="chart-box">
+          <canvas
+            id="c3c"
+            role="img"
+            aria-label="Grouped bar chart of early and mid career wages"
+          ></canvas>
+        </div>
+      </div>
+
+      <!-- ============ INTERACTIVE IDEAS ============ -->
+      <section class="section-head" id="interactive">
+        <p class="kicker">For M3 and M4</p>
+        <h2>Interactive ideas</h2>
+        <p>
+          Brainstorm only, nothing committed yet. Each one reads a feed we
+          already have.
+        </p>
+      </section>
+      <div class="grid">
+        <div class="card">
+          <h3>Pick your field or major</h3>
+          <p>
+            A dropdown or search box that highlights one field across all nine
+            charts and shows its row from Tables 2 and 3. Reviewers asked for
+            this at M1. Reads <code>fields.php</code> and
+            <code>jobs.php?field=</code>.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Drill down from field to job</h3>
+          <p>
+            Click a bubble in 2c to load that field's occupations into a scatter
+            of observed use against projected change. Reads
+            <code>jobs.php?field=</code>.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Exposure threshold slider</h3>
+          <p>
+            A slider for what counts as "exposed" (Very high only, High and up,
+            Moderate and up) that redraws 2a and the headline share live.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Weighting toggle</h3>
+          <p>
+            Switch between "every occupation counts once" and "weight by 2025
+            employment". The averages in Tables 1 and 2 change, which shows how
+            much a few large jobs drive the story.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Education and experience filters</h3>
+          <p>
+            Checkboxes for required education and work experience that filter
+            every chart. Tests whether entry jobs are the exposed ones. Reads
+            <code>experience.php</code>.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Prediction vs reality narrative</h3>
+          <p>
+            A scroll story that steps through Low to Very high, revealing
+            observed use one level at a time, ending on the field the reader
+            picked.
+          </p>
+        </div>
+      </div>
+      <p class="sub">
+        Teammates' 13b charts that fit here:
+        <span class="need"
+          >[NEED: Jerry, Keanna, Mikayla, Ellen, link your 13b charts so we can
+          swap in the strongest]</span
+        >
+      </p>
+
+      <!-- ============ FEEDS ============ -->
+      <section class="section-head" id="feeds">
+        <p class="kicker">JSON feeds</p>
+        <h2>php pages that output our data as JSON</h2>
+        <p>
+          Built by Caleb. Each runs one SELECT on a view in
+          <code>ellenjun_aijobs</code> and returns a JSON array. They run on
+          iyaserver only, since they need the database login in a gitignored
+          <code>config.php</code>.
+        </p>
+      </section>
+      <ul class="list">
+        <li>
+          <code>api/fields.php</code>: every field with jobs, employment,
+          average change, average wage and high-exposure share (view
+          <code>field_summary</code>, Table 2).
+        </li>
+        <li>
+          <code>api/exposure.php</code>: one row per AI exposure level, Low to
+          Very high (view <code>exposure_summary</code>, Table 1).
+        </li>
+        <li>
+          <code>api/experience.php</code>: one row per work experience level
+          (view <code>experience_summary</code>).
+        </li>
+        <li>
+          <code>api/jobs.php</code>: every occupation, or one field with
+          <code>?field=Tech</code>, or one job with <code>?code=15-1252</code>.
+        </li>
+      </ul>
+      <p>
+        <span class="need"
+          >[NEED: Ellen, run db/views.sql on ellenjun_aijobs and confirm the
+          table is named aijobs; NEED: group, pick the one iyaserver account
+          that hosts the graded site]</span
+        >
+      </p>
+    </main>
+    <footer>
+      ACAD 274, Fall 2026, Group 1. Sources: Ellen's occupation dataset
+      (ellenjun_aijobs), Anthropic Economic Index job exposure (CC-BY), NY Fed
+      Labor Market for Recent College Graduates. Full list on the
+      <a href="resources.html">Resources</a> page.
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+    <script src="js/m2-data.js"></script>
+    <script src="js/charts.js"></script>
+  </body>
 </html>

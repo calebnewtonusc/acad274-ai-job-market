@@ -1,0 +1,1052 @@
+{
+ "source_note": "Built by tools/build.py from data/clean/*.csv",
+ "counts": {
+  "occupations": 831,
+  "joined_to_observed": 755,
+  "majors": 73
+ },
+ "exposure": [
+  {
+   "AIExposure": "Low",
+   "Jobs": 213,
+   "Employment2025": 30264.7,
+   "AvgChangePct": 0.2,
+   "AvgMedianWage": 58130,
+   "ObservedJobs": 201,
+   "AvgObservedUse": 0.001
+  },
+  {
+   "AIExposure": "Moderate",
+   "Jobs": 206,
+   "Employment2025": 44651.3,
+   "AvgChangePct": 2.8,
+   "AvgMedianWage": 69557,
+   "ObservedJobs": 184,
+   "AvgObservedUse": 0.008
+  },
+  {
+   "AIExposure": "High",
+   "Jobs": 206,
+   "Employment2025": 42142.0,
+   "AvgChangePct": 3.4,
+   "AvgMedianWage": 89570,
+   "ObservedJobs": 180,
+   "AvgObservedUse": 0.06
+  },
+  {
+   "AIExposure": "Very high",
+   "Jobs": 206,
+   "Employment2025": 53209.2,
+   "AvgChangePct": 2.0,
+   "AvgMedianWage": 83285,
+   "ObservedJobs": 190,
+   "AvgObservedUse": 0.241
+  }
+ ],
+ "fields": [
+  {
+   "Category": "Legal",
+   "Jobs": 8,
+   "Employment2025": 1445.8,
+   "AvgChangePct": 2.1,
+   "AvgMedianWage": 95703,
+   "HighExposurePct": 100.0,
+   "ObservedJobs": 7,
+   "AvgObservedUse": 0.216,
+   "Mix": {
+    "Low": 0,
+    "Moderate": 0,
+    "High": 4,
+    "Very high": 4
+   }
+  },
+  {
+   "Category": "Tech",
+   "Jobs": 22,
+   "Employment2025": 6179.6,
+   "AvgChangePct": 8.0,
+   "AvgMedianWage": 112399,
+   "HighExposurePct": 100.0,
+   "ObservedJobs": 22,
+   "AvgObservedUse": 0.369,
+   "Mix": {
+    "Low": 0,
+    "Moderate": 0,
+    "High": 0,
+    "Very high": 22
+   }
+  },
+  {
+   "Category": "Engineering & Architecture",
+   "Jobs": 36,
+   "Employment2025": 2690.2,
+   "AvgChangePct": 4.7,
+   "AvgMedianWage": 96064,
+   "HighExposurePct": 97.2,
+   "ObservedJobs": 34,
+   "AvgObservedUse": 0.038,
+   "Mix": {
+    "Low": 0,
+    "Moderate": 1,
+    "High": 24,
+    "Very high": 11
+   }
+  },
+  {
+   "Category": "Business & Finance",
+   "Jobs": 32,
+   "Employment2025": 11368.5,
+   "AvgChangePct": 4.1,
+   "AvgMedianWage": 80950,
+   "HighExposurePct": 96.9,
+   "ObservedJobs": 29,
+   "AvgObservedUse": 0.177,
+   "Mix": {
+    "Low": 1,
+    "Moderate": 0,
+    "High": 5,
+    "Very high": 26
+   }
+  },
+  {
+   "Category": "Education",
+   "Jobs": 68,
+   "Employment2025": 10636.8,
+   "AvgChangePct": 2.0,
+   "AvgMedianWage": 77433,
+   "HighExposurePct": 95.6,
+   "ObservedJobs": 60,
+   "AvgObservedUse": 0.125,
+   "Mix": {
+    "Low": 0,
+    "Moderate": 3,
+    "High": 33,
+    "Very high": 32
+   }
+  },
+  {
+   "Category": "Sales",
+   "Jobs": 22,
+   "Employment2025": 14533.1,
+   "AvgChangePct": -1.5,
+   "AvgMedianWage": 58511,
+   "HighExposurePct": 95.5,
+   "ObservedJobs": 20,
+   "AvgObservedUse": 0.236,
+   "Mix": {
+    "Low": 0,
+    "Moderate": 1,
+    "High": 5,
+    "Very high": 16
+   }
+  },
+  {
+   "Category": "Community & Social Services",
+   "Jobs": 17,
+   "Employment2025": 3270.1,
+   "AvgChangePct": 6.5,
+   "AvgMedianWage": 58293,
+   "HighExposurePct": 94.1,
+   "ObservedJobs": 12,
+   "AvgObservedUse": 0.052,
+   "Mix": {
+    "Low": 0,
+    "Moderate": 1,
+    "High": 13,
+    "Very high": 3
+   }
+  },
+  {
+   "Category": "Management",
+   "Jobs": 24,
+   "Employment2025": 11002.9,
+   "AvgChangePct": 4.7,
+   "AvgMedianWage": 125386,
+   "HighExposurePct": 91.7,
+   "ObservedJobs": 24,
+   "AvgObservedUse": 0.104,
+   "Mix": {
+    "Low": 0,
+    "Moderate": 2,
+    "High": 15,
+    "Very high": 7
+   }
+  },
+  {
+   "Category": "Science",
+   "Jobs": 48,
+   "Employment2025": 1628.5,
+   "AvgChangePct": 5.5,
+   "AvgMedianWage": 90901,
+   "HighExposurePct": 91.7,
+   "ObservedJobs": 46,
+   "AvgObservedUse": 0.122,
+   "Mix": {
+    "Low": 0,
+    "Moderate": 4,
+    "High": 19,
+    "Very high": 25
+   }
+  },
+  {
+   "Category": "Office & Administration",
+   "Jobs": 54,
+   "Employment2025": 18792.5,
+   "AvgChangePct": -6.0,
+   "AvgMedianWage": 49274,
+   "HighExposurePct": 88.9,
+   "ObservedJobs": 50,
+   "AvgObservedUse": 0.191,
+   "Mix": {
+    "Low": 1,
+    "Moderate": 5,
+    "High": 8,
+    "Very high": 40
+   }
+  },
+  {
+   "Category": "Entertainment & Media",
+   "Jobs": 55,
+   "Employment2025": 3876.2,
+   "AvgChangePct": 1.4,
+   "AvgMedianWage": 66864,
+   "HighExposurePct": 67.3,
+   "ObservedJobs": 44,
+   "AvgObservedUse": 0.121,
+   "Mix": {
+    "Low": 2,
+    "Moderate": 16,
+    "High": 23,
+    "Very high": 14
+   }
+  },
+  {
+   "Category": "Healthcare",
+   "Jobs": 89,
+   "Employment2025": 19294.5,
+   "AvgChangePct": 8.2,
+   "AvgMedianWage": 137979,
+   "HighExposurePct": 37.1,
+   "ObservedJobs": 82,
+   "AvgObservedUse": 0.043,
+   "Mix": {
+    "Low": 24,
+    "Moderate": 32,
+    "High": 29,
+    "Very high": 4
+   }
+  },
+  {
+   "Category": "Personal Care & Services",
+   "Jobs": 23,
+   "Employment2025": 3809.4,
+   "AvgChangePct": 4.6,
+   "AvgMedianWage": 44825,
+   "HighExposurePct": 26.1,
+   "ObservedJobs": 20,
+   "AvgObservedUse": 0.023,
+   "Mix": {
+    "Low": 4,
+    "Moderate": 13,
+    "High": 5,
+    "Very high": 1
+   }
+  },
+  {
+   "Category": "Public Safety",
+   "Jobs": 24,
+   "Employment2025": 3871.4,
+   "AvgChangePct": 1.5,
+   "AvgMedianWage": 62203,
+   "HighExposurePct": 25.0,
+   "ObservedJobs": 21,
+   "AvgObservedUse": 0.012,
+   "Mix": {
+    "Low": 3,
+    "Moderate": 15,
+    "High": 6,
+    "Very high": 0
+   }
+  },
+  {
+   "Category": "Cleaning & Grounds",
+   "Jobs": 10,
+   "Employment2025": 5699.6,
+   "AvgChangePct": 3.4,
+   "AvgMedianWage": 45248,
+   "HighExposurePct": 20.0,
+   "ObservedJobs": 8,
+   "AvgObservedUse": 0.025,
+   "Mix": {
+    "Low": 7,
+    "Moderate": 1,
+    "High": 2,
+    "Very high": 0
+   }
+  },
+  {
+   "Category": "Food & Hospitality",
+   "Jobs": 19,
+   "Employment2025": 14225.6,
+   "AvgChangePct": 3.7,
+   "AvgMedianWage": 41037,
+   "HighExposurePct": 15.8,
+   "ObservedJobs": 17,
+   "AvgObservedUse": 0.015,
+   "Mix": {
+    "Low": 5,
+    "Moderate": 11,
+    "High": 3,
+    "Very high": 0
+   }
+  },
+  {
+   "Category": "Transportation & Logistics",
+   "Jobs": 50,
+   "Employment2025": 14139.2,
+   "AvgChangePct": 3.0,
+   "AvgMedianWage": 61913,
+   "HighExposurePct": 10.0,
+   "ObservedJobs": 44,
+   "AvgObservedUse": 0.006,
+   "Mix": {
+    "Low": 23,
+    "Moderate": 22,
+    "High": 5,
+    "Very high": 0
+   }
+  },
+  {
+   "Category": "Installation & Repair",
+   "Jobs": 51,
+   "Employment2025": 6494.1,
+   "AvgChangePct": 3.2,
+   "AvgMedianWage": 61256,
+   "HighExposurePct": 5.9,
+   "ObservedJobs": 50,
+   "AvgObservedUse": 0.007,
+   "Mix": {
+    "Low": 21,
+    "Moderate": 27,
+    "High": 3,
+    "Very high": 0
+   }
+  },
+  {
+   "Category": "Manufacturing",
+   "Jobs": 105,
+   "Employment2025": 8780.2,
+   "AvgChangePct": -4.4,
+   "AvgMedianWage": 50839,
+   "HighExposurePct": 3.8,
+   "ObservedJobs": 98,
+   "AvgObservedUse": 0.008,
+   "Mix": {
+    "Low": 58,
+    "Moderate": 43,
+    "High": 3,
+    "Very high": 1
+   }
+  },
+  {
+   "Category": "Construction",
+   "Jobs": 60,
+   "Employment2025": 7492.9,
+   "AvgChangePct": 1.4,
+   "AvgMedianWage": 58169,
+   "HighExposurePct": 1.7,
+   "ObservedJobs": 56,
+   "AvgObservedUse": 0.004,
+   "Mix": {
+    "Low": 53,
+    "Moderate": 6,
+    "High": 1,
+    "Very high": 0
+   }
+  },
+  {
+   "Category": "Agriculture & Forestry",
+   "Jobs": 14,
+   "Employment2025": 1036.1,
+   "AvgChangePct": -1.2,
+   "AvgMedianWage": 45594,
+   "HighExposurePct": 0.0,
+   "ObservedJobs": 11,
+   "AvgObservedUse": 0.002,
+   "Mix": {
+    "Low": 11,
+    "Moderate": 3,
+    "High": 0,
+    "Very high": 0
+   }
+  }
+ ],
+ "majors": [
+  {
+   "Major": "Anthropology",
+   "Category": "Science",
+   "UnemploymentRate": 7.9,
+   "UnderemploymentRate": 55.3,
+   "MedianWageEarly": 45000,
+   "MedianWageMid": 65000,
+   "CategoryHighExposurePct": 91.7
+  },
+  {
+   "Major": "Computer Engineering",
+   "Category": "Tech",
+   "UnemploymentRate": 7.8,
+   "UnderemploymentRate": 15.8,
+   "MedianWageEarly": 90000,
+   "MedianWageMid": 131000,
+   "CategoryHighExposurePct": 100.0
+  },
+  {
+   "Major": "Fine Arts",
+   "Category": "Entertainment & Media",
+   "UnemploymentRate": 7.7,
+   "UnderemploymentRate": 58.9,
+   "MedianWageEarly": 45000,
+   "MedianWageMid": 72000,
+   "CategoryHighExposurePct": 67.3
+  },
+  {
+   "Major": "Computer Science",
+   "Category": "Tech",
+   "UnemploymentRate": 7.0,
+   "UnderemploymentRate": 19.1,
+   "MedianWageEarly": 87000,
+   "MedianWageMid": 120000,
+   "CategoryHighExposurePct": 100.0
+  },
+  {
+   "Major": "Performing Arts",
+   "Category": "Entertainment & Media",
+   "UnemploymentRate": 7.0,
+   "UnderemploymentRate": 63.9,
+   "MedianWageEarly": 44000,
+   "MedianWageMid": 75000,
+   "CategoryHighExposurePct": 67.3
+  },
+  {
+   "Major": "Architecture",
+   "Category": "Engineering & Architecture",
+   "UnemploymentRate": 6.8,
+   "UnderemploymentRate": 25.7,
+   "MedianWageEarly": 60000,
+   "MedianWageMid": 91000,
+   "CategoryHighExposurePct": 97.2
+  },
+  {
+   "Major": "Art History",
+   "Category": "Entertainment & Media",
+   "UnemploymentRate": 6.7,
+   "UnderemploymentRate": 45.3,
+   "MedianWageEarly": 45000,
+   "MedianWageMid": 91000,
+   "CategoryHighExposurePct": 67.3
+  },
+  {
+   "Major": "Early Childhood Education",
+   "Category": "Education",
+   "UnemploymentRate": 6.6,
+   "UnderemploymentRate": 22.3,
+   "MedianWageEarly": 45000,
+   "MedianWageMid": 52000,
+   "CategoryHighExposurePct": 95.6
+  },
+  {
+   "Major": "Physics",
+   "Category": "Science",
+   "UnemploymentRate": 6.6,
+   "UnderemploymentRate": 29.1,
+   "MedianWageEarly": 67000,
+   "MedianWageMid": 105000,
+   "CategoryHighExposurePct": 91.7
+  },
+  {
+   "Major": "Environmental Studies",
+   "Category": "Science",
+   "UnemploymentRate": 6.3,
+   "UnderemploymentRate": 50.5,
+   "MedianWageEarly": 50000,
+   "MedianWageMid": 80000,
+   "CategoryHighExposurePct": 91.7
+  },
+  {
+   "Major": "Medical Technicians",
+   "Category": "Healthcare",
+   "UnemploymentRate": 6.2,
+   "UnderemploymentRate": 47.0,
+   "MedianWageEarly": 62000,
+   "MedianWageMid": 80000,
+   "CategoryHighExposurePct": 37.1
+  },
+  {
+   "Major": "English Language",
+   "Category": "Entertainment & Media",
+   "UnemploymentRate": 6.1,
+   "UnderemploymentRate": 48.5,
+   "MedianWageEarly": 48000,
+   "MedianWageMid": 76000,
+   "CategoryHighExposurePct": 67.3
+  },
+  {
+   "Major": "International Affairs",
+   "Category": "Legal",
+   "UnemploymentRate": 6.1,
+   "UnderemploymentRate": 45.2,
+   "MedianWageEarly": 64000,
+   "MedianWageMid": 90000,
+   "CategoryHighExposurePct": 100.0
+  },
+  {
+   "Major": "Information Systems & Management",
+   "Category": "Tech",
+   "UnemploymentRate": 6.0,
+   "UnderemploymentRate": 25.6,
+   "MedianWageEarly": 67000,
+   "MedianWageMid": 100000,
+   "CategoryHighExposurePct": 100.0
+  },
+  {
+   "Major": "Mathematics",
+   "Category": "Science",
+   "UnemploymentRate": 5.8,
+   "UnderemploymentRate": 26.2,
+   "MedianWageEarly": 70000,
+   "MedianWageMid": 100000,
+   "CategoryHighExposurePct": 91.7
+  },
+  {
+   "Major": "Advertising and Public Relations",
+   "Category": "Sales",
+   "UnemploymentRate": 5.7,
+   "UnderemploymentRate": 38.1,
+   "MedianWageEarly": 60000,
+   "MedianWageMid": 92000,
+   "CategoryHighExposurePct": 95.5
+  },
+  {
+   "Major": "Commercial Art & Graphic Design",
+   "Category": "Entertainment & Media",
+   "UnemploymentRate": 5.7,
+   "UnderemploymentRate": 37.1,
+   "MedianWageEarly": 50000,
+   "MedianWageMid": 80000,
+   "CategoryHighExposurePct": 67.3
+  },
+  {
+   "Major": "Pharmacy",
+   "Category": "Healthcare",
+   "UnemploymentRate": 5.6,
+   "UnderemploymentRate": 30.5,
+   "MedianWageEarly": 40000,
+   "MedianWageMid": 85000,
+   "CategoryHighExposurePct": 37.1
+  },
+  {
+   "Major": "Mass Media",
+   "Category": "Entertainment & Media",
+   "UnemploymentRate": 5.2,
+   "UnderemploymentRate": 52.1,
+   "MedianWageEarly": 50000,
+   "MedianWageMid": 80000,
+   "CategoryHighExposurePct": 67.3
+  },
+  {
+   "Major": "Philosophy",
+   "Category": null,
+   "UnemploymentRate": 5.1,
+   "UnderemploymentRate": 47.1,
+   "MedianWageEarly": 52000,
+   "MedianWageMid": 80000,
+   "CategoryHighExposurePct": null
+  },
+  {
+   "Major": "Psychology",
+   "Category": "Community & Social Services",
+   "UnemploymentRate": 5.0,
+   "UnderemploymentRate": 48.3,
+   "MedianWageEarly": 45000,
+   "MedianWageMid": 72000,
+   "CategoryHighExposurePct": 94.1
+  },
+  {
+   "Major": "Business Analytics",
+   "Category": "Business & Finance",
+   "UnemploymentRate": 5.0,
+   "UnderemploymentRate": 28.7,
+   "MedianWageEarly": 72000,
+   "MedianWageMid": 109000,
+   "CategoryHighExposurePct": 96.9
+  },
+  {
+   "Major": "Ethnic Studies",
+   "Category": "Community & Social Services",
+   "UnemploymentRate": 4.9,
+   "UnderemploymentRate": 49.6,
+   "MedianWageEarly": 52000,
+   "MedianWageMid": 90000,
+   "CategoryHighExposurePct": 94.1
+  },
+  {
+   "Major": "Chemical Engineering",
+   "Category": "Engineering & Architecture",
+   "UnemploymentRate": 4.7,
+   "UnderemploymentRate": 17.9,
+   "MedianWageEarly": 85000,
+   "MedianWageMid": 135000,
+   "CategoryHighExposurePct": 97.2
+  },
+  {
+   "Major": "Sociology",
+   "Category": "Community & Social Services",
+   "UnemploymentRate": 4.6,
+   "UnderemploymentRate": 52.0,
+   "MedianWageEarly": 49900,
+   "MedianWageMid": 79000,
+   "CategoryHighExposurePct": 94.1
+  },
+  {
+   "Major": "General Engineering",
+   "Category": "Engineering & Architecture",
+   "UnemploymentRate": 4.5,
+   "UnderemploymentRate": 31.1,
+   "MedianWageEarly": 75000,
+   "MedianWageMid": 105000,
+   "CategoryHighExposurePct": 97.2
+  },
+  {
+   "Major": "Nutrition Sciences",
+   "Category": "Healthcare",
+   "UnemploymentRate": 4.5,
+   "UnderemploymentRate": 48.3,
+   "MedianWageEarly": 50000,
+   "MedianWageMid": 70000,
+   "CategoryHighExposurePct": 37.1
+  },
+  {
+   "Major": "Political Science",
+   "Category": "Legal",
+   "UnemploymentRate": 4.5,
+   "UnderemploymentRate": 48.7,
+   "MedianWageEarly": 52000,
+   "MedianWageMid": 100000,
+   "CategoryHighExposurePct": 100.0
+  },
+  {
+   "Major": "Mechanical Engineering",
+   "Category": "Engineering & Architecture",
+   "UnemploymentRate": 4.4,
+   "UnderemploymentRate": 20.1,
+   "MedianWageEarly": 80000,
+   "MedianWageMid": 120000,
+   "CategoryHighExposurePct": 97.2
+  },
+  {
+   "Major": "Miscellaneous Biological Science",
+   "Category": "Science",
+   "UnemploymentRate": 4.4,
+   "UnderemploymentRate": 46.9,
+   "MedianWageEarly": 46000,
+   "MedianWageMid": 80000,
+   "CategoryHighExposurePct": 91.7
+  },
+  {
+   "Major": "Marketing",
+   "Category": "Sales",
+   "UnemploymentRate": 4.4,
+   "UnderemploymentRate": 49.3,
+   "MedianWageEarly": 60000,
+   "MedianWageMid": 100000,
+   "CategoryHighExposurePct": 95.5
+  },
+  {
+   "Major": "Family and Consumer Sciences",
+   "Category": "Personal Care & Services",
+   "UnemploymentRate": 4.3,
+   "UnderemploymentRate": 45.6,
+   "MedianWageEarly": 48000,
+   "MedianWageMid": 65000,
+   "CategoryHighExposurePct": 26.1
+  },
+  {
+   "Major": "Biology",
+   "Category": "Science",
+   "UnemploymentRate": 4.3,
+   "UnderemploymentRate": 51.1,
+   "MedianWageEarly": 45000,
+   "MedianWageMid": 83000,
+   "CategoryHighExposurePct": 91.7
+  },
+  {
+   "Major": "Chemistry",
+   "Category": "Science",
+   "UnemploymentRate": 4.3,
+   "UnderemploymentRate": 42.8,
+   "MedianWageEarly": 50000,
+   "MedianWageMid": 86000,
+   "CategoryHighExposurePct": 91.7
+  },
+  {
+   "Major": "General Business",
+   "Category": "Business & Finance",
+   "UnemploymentRate": 4.3,
+   "UnderemploymentRate": 50.4,
+   "MedianWageEarly": 60000,
+   "MedianWageMid": 90000,
+   "CategoryHighExposurePct": 96.9
+  },
+  {
+   "Major": "History",
+   "Category": "Education",
+   "UnemploymentRate": 4.3,
+   "UnderemploymentRate": 50.1,
+   "MedianWageEarly": 47500,
+   "MedianWageMid": 80000,
+   "CategoryHighExposurePct": 95.6
+  },
+  {
+   "Major": "Industrial Engineering",
+   "Category": "Engineering & Architecture",
+   "UnemploymentRate": 4.2,
+   "UnderemploymentRate": 31.7,
+   "MedianWageEarly": 83000,
+   "MedianWageMid": 100000,
+   "CategoryHighExposurePct": 97.2
+  },
+  {
+   "Major": "Communications",
+   "Category": "Entertainment & Media",
+   "UnemploymentRate": 3.9,
+   "UnderemploymentRate": 53.0,
+   "MedianWageEarly": 52000,
+   "MedianWageMid": 88000,
+   "CategoryHighExposurePct": 67.3
+  },
+  {
+   "Major": "Interdisciplinary Studies",
+   "Category": null,
+   "UnemploymentRate": 3.9,
+   "UnderemploymentRate": 45.2,
+   "MedianWageEarly": 52000,
+   "MedianWageMid": 80000,
+   "CategoryHighExposurePct": null
+  },
+  {
+   "Major": "Liberal Arts",
+   "Category": null,
+   "UnemploymentRate": 3.8,
+   "UnderemploymentRate": 54.6,
+   "MedianWageEarly": 45000,
+   "MedianWageMid": 75000,
+   "CategoryHighExposurePct": null
+  },
+  {
+   "Major": "Earth Sciences",
+   "Category": "Science",
+   "UnemploymentRate": 3.8,
+   "UnderemploymentRate": 31.4,
+   "MedianWageEarly": 50000,
+   "MedianWageMid": 75000,
+   "CategoryHighExposurePct": 91.7
+  },
+  {
+   "Major": "Health Services",
+   "Category": "Healthcare",
+   "UnemploymentRate": 3.8,
+   "UnderemploymentRate": 45.1,
+   "MedianWageEarly": 50000,
+   "MedianWageMid": 67000,
+   "CategoryHighExposurePct": 37.1
+  },
+  {
+   "Major": "Business Management",
+   "Category": "Management",
+   "UnemploymentRate": 3.8,
+   "UnderemploymentRate": 52.6,
+   "MedianWageEarly": 56000,
+   "MedianWageMid": 82000,
+   "CategoryHighExposurePct": 91.7
+  },
+  {
+   "Major": "Miscellaneous Engineering",
+   "Category": "Engineering & Architecture",
+   "UnemploymentRate": 3.7,
+   "UnderemploymentRate": 26.4,
+   "MedianWageEarly": 75000,
+   "MedianWageMid": 105000,
+   "CategoryHighExposurePct": 97.2
+  },
+  {
+   "Major": "Criminal Justice",
+   "Category": "Public Safety",
+   "UnemploymentRate": 3.6,
+   "UnderemploymentRate": 65.8,
+   "MedianWageEarly": 50000,
+   "MedianWageMid": 80000,
+   "CategoryHighExposurePct": 25.0
+  },
+  {
+   "Major": "Miscellaneous Technologies",
+   "Category": "Installation & Repair",
+   "UnemploymentRate": 3.6,
+   "UnderemploymentRate": 49.0,
+   "MedianWageEarly": 54000,
+   "MedianWageMid": 96000,
+   "CategoryHighExposurePct": 5.9
+  },
+  {
+   "Major": "Economics",
+   "Category": "Business & Finance",
+   "UnemploymentRate": 3.5,
+   "UnderemploymentRate": 33.1,
+   "MedianWageEarly": 72000,
+   "MedianWageMid": 115000,
+   "CategoryHighExposurePct": 96.9
+  },
+  {
+   "Major": "Electrical Engineering",
+   "Category": "Engineering & Architecture",
+   "UnemploymentRate": 3.2,
+   "UnderemploymentRate": 21.1,
+   "MedianWageEarly": 82000,
+   "MedianWageMid": 123000,
+   "CategoryHighExposurePct": 97.2
+  },
+  {
+   "Major": "Theology and Religion",
+   "Category": "Community & Social Services",
+   "UnemploymentRate": 3.1,
+   "UnderemploymentRate": 47.5,
+   "MedianWageEarly": 41600,
+   "MedianWageMid": 66000,
+   "CategoryHighExposurePct": 94.1
+  },
+  {
+   "Major": "Finance",
+   "Category": "Business & Finance",
+   "UnemploymentRate": 2.8,
+   "UnderemploymentRate": 27.8,
+   "MedianWageEarly": 70000,
+   "MedianWageMid": 112000,
+   "CategoryHighExposurePct": 96.9
+  },
+  {
+   "Major": "Biochemistry",
+   "Category": "Science",
+   "UnemploymentRate": 2.7,
+   "UnderemploymentRate": 42.0,
+   "MedianWageEarly": 52000,
+   "MedianWageMid": 100000,
+   "CategoryHighExposurePct": 91.7
+  },
+  {
+   "Major": "Leisure and Hospitality",
+   "Category": "Food & Hospitality",
+   "UnemploymentRate": 2.7,
+   "UnderemploymentRate": 58.1,
+   "MedianWageEarly": 45000,
+   "MedianWageMid": 75000,
+   "CategoryHighExposurePct": 15.8
+  },
+  {
+   "Major": "General Education",
+   "Category": "Education",
+   "UnemploymentRate": 2.6,
+   "UnderemploymentRate": 28.1,
+   "MedianWageEarly": 45000,
+   "MedianWageMid": 56000,
+   "CategoryHighExposurePct": 95.6
+  },
+  {
+   "Major": "Treatment Therapy",
+   "Category": "Healthcare",
+   "UnemploymentRate": 2.6,
+   "UnderemploymentRate": 39.1,
+   "MedianWageEarly": 50000,
+   "MedianWageMid": 70000,
+   "CategoryHighExposurePct": 37.1
+  },
+  {
+   "Major": "Accounting",
+   "Category": "Business & Finance",
+   "UnemploymentRate": 2.6,
+   "UnderemploymentRate": 21.2,
+   "MedianWageEarly": 68000,
+   "MedianWageMid": 97000,
+   "CategoryHighExposurePct": 96.9
+  },
+  {
+   "Major": "Animal and Plant Sciences",
+   "Category": "Agriculture & Forestry",
+   "UnemploymentRate": 2.5,
+   "UnderemploymentRate": 53.5,
+   "MedianWageEarly": 46600,
+   "MedianWageMid": 79000,
+   "CategoryHighExposurePct": 0.0
+  },
+  {
+   "Major": "Miscellaneous Physical Sciences",
+   "Category": "Science",
+   "UnemploymentRate": 2.5,
+   "UnderemploymentRate": 22.5,
+   "MedianWageEarly": 60000,
+   "MedianWageMid": 81000,
+   "CategoryHighExposurePct": 91.7
+  },
+  {
+   "Major": "Journalism",
+   "Category": "Entertainment & Media",
+   "UnemploymentRate": 2.3,
+   "UnderemploymentRate": 43.3,
+   "MedianWageEarly": 49000,
+   "MedianWageMid": 87000,
+   "CategoryHighExposurePct": 67.3
+  },
+  {
+   "Major": "Civil Engineering",
+   "Category": "Engineering & Architecture",
+   "UnemploymentRate": 2.3,
+   "UnderemploymentRate": 15.6,
+   "MedianWageEarly": 75000,
+   "MedianWageMid": 115000,
+   "CategoryHighExposurePct": 97.2
+  },
+  {
+   "Major": "General Social Sciences",
+   "Category": "Community & Social Services",
+   "UnemploymentRate": 2.3,
+   "UnderemploymentRate": 38.0,
+   "MedianWageEarly": 45200,
+   "MedianWageMid": 75000,
+   "CategoryHighExposurePct": 94.1
+  },
+  {
+   "Major": "Aerospace Engineering",
+   "Category": "Engineering & Architecture",
+   "UnemploymentRate": 2.2,
+   "UnderemploymentRate": 14.7,
+   "MedianWageEarly": 85000,
+   "MedianWageMid": 130000,
+   "CategoryHighExposurePct": 97.2
+  },
+  {
+   "Major": "Public Policy and Law",
+   "Category": "Legal",
+   "UnemploymentRate": 2.2,
+   "UnderemploymentRate": 45.5,
+   "MedianWageEarly": 55000,
+   "MedianWageMid": 80000,
+   "CategoryHighExposurePct": 100.0
+  },
+  {
+   "Major": "Construction Services",
+   "Category": "Construction",
+   "UnemploymentRate": 2.2,
+   "UnderemploymentRate": 17.9,
+   "MedianWageEarly": 75000,
+   "MedianWageMid": 120000,
+   "CategoryHighExposurePct": 1.7
+  },
+  {
+   "Major": "Secondary Education",
+   "Category": "Education",
+   "UnemploymentRate": 2.1,
+   "UnderemploymentRate": 21.7,
+   "MedianWageEarly": 45300,
+   "MedianWageMid": 62000,
+   "CategoryHighExposurePct": 95.6
+  },
+  {
+   "Major": "Nursing",
+   "Category": "Healthcare",
+   "UnemploymentRate": 2.1,
+   "UnderemploymentRate": 12.8,
+   "MedianWageEarly": 70000,
+   "MedianWageMid": 87000,
+   "CategoryHighExposurePct": 37.1
+  },
+  {
+   "Major": "Social Services",
+   "Category": "Community & Social Services",
+   "UnemploymentRate": 1.9,
+   "UnderemploymentRate": 30.1,
+   "MedianWageEarly": 43000,
+   "MedianWageMid": 60000,
+   "CategoryHighExposurePct": 94.1
+  },
+  {
+   "Major": "Engineering Technologies",
+   "Category": "Engineering & Architecture",
+   "UnemploymentRate": 1.7,
+   "UnderemploymentRate": 44.4,
+   "MedianWageEarly": 65000,
+   "MedianWageMid": 104000,
+   "CategoryHighExposurePct": 97.2
+  },
+  {
+   "Major": "Foreign Language",
+   "Category": "Education",
+   "UnemploymentRate": 1.6,
+   "UnderemploymentRate": 54.0,
+   "MedianWageEarly": 48000,
+   "MedianWageMid": 77000,
+   "CategoryHighExposurePct": 95.6
+  },
+  {
+   "Major": "Geography",
+   "Category": "Science",
+   "UnemploymentRate": 1.6,
+   "UnderemploymentRate": 43.0,
+   "MedianWageEarly": 50000,
+   "MedianWageMid": 88000,
+   "CategoryHighExposurePct": 91.7
+  },
+  {
+   "Major": "Agriculture",
+   "Category": "Agriculture & Forestry",
+   "UnemploymentRate": 1.4,
+   "UnderemploymentRate": 57.1,
+   "MedianWageEarly": 56000,
+   "MedianWageMid": 80000,
+   "CategoryHighExposurePct": 0.0
+  },
+  {
+   "Major": "Elementary Education",
+   "Category": "Education",
+   "UnemploymentRate": 1.2,
+   "UnderemploymentRate": 16.2,
+   "MedianWageEarly": 45000,
+   "MedianWageMid": 55000,
+   "CategoryHighExposurePct": 95.6
+  },
+  {
+   "Major": "Miscellaneous Education",
+   "Category": "Education",
+   "UnemploymentRate": 1.1,
+   "UnderemploymentRate": 24.5,
+   "MedianWageEarly": 48000,
+   "MedianWageMid": 60000,
+   "CategoryHighExposurePct": 95.6
+  },
+  {
+   "Major": "Special Education",
+   "Category": "Education",
+   "UnemploymentRate": 0.7,
+   "UnderemploymentRate": 16.0,
+   "MedianWageEarly": 46000,
+   "MedianWageMid": 56000,
+   "CategoryHighExposurePct": 95.6
+  }
+ ],
+ "majors_overall": {
+  "Major": "Overall",
+  "Category": null,
+  "UnemploymentRate": 4.2,
+  "UnderemploymentRate": 39.4,
+  "MedianWageEarly": 58000,
+  "MedianWageMid": 87000,
+  "CategoryHighExposurePct": null
+ }
+}

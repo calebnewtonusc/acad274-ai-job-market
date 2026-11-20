@@ -1,18 +1,142 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Home | AI and the Job Market</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-<header><nav><a href="index.html">Home</a><a href="data.html">Data</a><a href="resources.html">Resources</a></nav></header>
-<main>
-  <h1>[NEED: our one-sentence claim about AI and jobs]</h1>
-  <p>Purpose and assumptions go here (M2 requirement).</p>
-</main>
-<footer>ACAD 274, Group 1</footer>
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home | AI and the Job Market</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">AI <span>and the</span> Job Market</a>
+      <nav>
+        <a class="current" href="index.html">Home</a><a href="data.html">Data</a
+        ><a href="resources.html">Resources</a>
+      </nav>
+    </header>
+    <main>
+      <p class="kicker">ACAD 274, Group 1, Milestone 2</p>
+      <h1>
+        Which jobs AI was predicted to touch, and which ones it actually is
+      </h1>
+      <p class="lede">
+        We combine a government-style AI exposure rating for 831 US occupations
+        with Anthropic's record of how people really use Claude on each job's
+        tasks, plus how recent grads in 73 majors are doing. A student picking a
+        major or a first job can see where the prediction and the real use
+        agree, and where they split.
+      </p>
+      <p>
+        <span class="need"
+          >[NEED: group sign-off on this one-sentence claim and audience, see
+          docs/project.md open questions 1 and 2]</span
+        >
+      </p>
+
+      <section class="grid stats" aria-label="Headline numbers">
+        <div class="card">
+          <div class="stat">0.241 vs 0.060</div>
+          <p>
+            Average observed AI use for occupations rated
+            <strong>Very high</strong> exposure, against those rated
+            <strong>High</strong>. One step down the rating, real use drops
+            about fourfold.
+          </p>
+          <p class="sub">
+            Anthropic Economic Index, 0 to 1 scale, 190 and 180 joined
+            occupations.
+          </p>
+        </div>
+        <div class="card">
+          <div class="stat">7.0%</div>
+          <p>
+            Unemployment for recent Computer Science grads (ages 22 to 27),
+            against 4.2% for all majors. Computer Engineering is 7.8%.
+          </p>
+          <p class="sub">
+            NY Fed, The Labor Market for Recent College Graduates.
+          </p>
+        </div>
+        <div class="card">
+          <div class="stat">16%</div>
+          <p>
+            Of currently enrolled US college students say they have already
+            changed their major or field of study because of AI's potential
+            impact.
+          </p>
+          <p class="sub">
+            Lumina Foundation and Gallup, 2026 State of Higher Education Study,
+            fielded Oct 2025.
+          </p>
+        </div>
+      </section>
+
+      <h2>Purpose</h2>
+      <p>
+        Most AI and jobs coverage repeats one prediction: a list of exposed
+        occupations. Our site puts three things side by side for each field:
+        what the exposure rating predicts, how much AI is actually being used on
+        that work today, and how graduates heading into it are doing. The goal
+        for the final build is a page where someone enters their field or major
+        and sees all three for it.
+      </p>
+
+      <h2>Who it is for</h2>
+      <p>
+        Our working assumption is USC students choosing a major or a first job.
+        The M2 interviews test that assumption.
+        <span class="need"
+          >[NEED: update after interviews are logged in
+          docs/interviews.md]</span
+        >
+      </p>
+
+      <h2>Assumptions we are making</h2>
+      <ul class="list">
+        <li>
+          <strong>The exposure rating is relative.</strong> The four levels hold
+          213, 206, 206 and 206 occupations, almost exact quarters, so "Low"
+          means low compared to other jobs, not zero.
+          <span class="need"
+            >[NEED: Ellen, the original source of the AIExposure column]</span
+          >
+        </li>
+        <li>
+          <strong>Employment numbers are projections.</strong> Employment 2025
+          and 2035 (thousands) and the median wage come from Ellen's dataset,
+          which follows the BLS Employment Projections layout.
+          <span class="need"
+            >[NEED: Ellen, confirm the exact source table and year]</span
+          >
+        </li>
+        <li>
+          <strong>Observed use is one company's view.</strong> Anthropic's score
+          is built from Claude conversations, so it shows how people use one
+          assistant, not all AI tools. It joins to 755 of our 831 occupations by
+          SOC code.
+        </li>
+        <li>
+          <strong>The major to field mapping is ours.</strong> The NY Fed
+          reports by major; we mapped each major to one of the 21 job fields so
+          the tables join. Three majors have no clean match.
+        </li>
+        <li>
+          <strong>Averages are per occupation.</strong> "Average projected
+          change" weights a small occupation the same as a large one, which
+          matches our database views.
+        </li>
+        <li>
+          <strong>Exposure is not loss.</strong> A high rating means AI can do
+          many of a job's tasks. It does not say the job shrinks; the data page
+          tests whether it does.
+        </li>
+      </ul>
+
+      <p><a href="data.html">See the three data tables and nine charts</a></p>
+    </main>
+    <footer>
+      ACAD 274, Fall 2026, Group 1: Caleb Newton, Keanna Bantay, Mikayla Wang,
+      Jerry Wu, Ellen Jung. Draft for Milestone 2.
+    </footer>
+  </body>
 </html>

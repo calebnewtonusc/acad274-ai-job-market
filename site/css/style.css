@@ -1,19 +1,271 @@
-/* The one shared stylesheet (M2 requires every page to link it).
-   Design owns this file: Keanna and Mikayla. Colors live in the variables below. */
+/* The one shared stylesheet. Every page links this file and nothing else for styling.
+   Design owns this file: Keanna and Mikayla. Colors live in the variables below,
+   so a new palette is a change to :root only. */
 :root {
   --ink: #1b1f24;
   --paper: #f6f4ef;
+  --card: #ffffff;
   --accent: #c2410c;
-  --muted: #6b7280;
-  --line: #d8d4ca;
+  --accent-soft: #fff1e8;
+  --muted: #5f6672;
+  --line: #e2ddd2;
+  --shadow: 0 1px 2px rgba(27, 31, 36, 0.05), 0 8px 24px rgba(27, 31, 36, 0.06);
+  /* AI exposure ramp, Low to Very high. Charts read these through getComputedStyle. */
+  --lvl-low: #fed7aa;
+  --lvl-moderate: #fb923c;
+  --lvl-high: #ea580c;
+  --lvl-veryhigh: #9a3412;
+  --series-2: #334155;
 }
-* { box-sizing: border-box; }
-body { margin: 0; font-family: "Inter", Helvetica, Arial, sans-serif; color: var(--ink); background: var(--paper); line-height: 1.5; }
-header, main, footer { max-width: 1100px; margin: 0 auto; padding: 16px; }
-nav a { color: var(--ink); text-decoration: none; margin-right: 16px; border-bottom: 2px solid transparent; }
-nav a:hover, nav a.current { border-bottom-color: var(--accent); }
-table { border-collapse: collapse; width: 100%; background: #fff; }
-th { background: var(--ink); color: #fff; text-align: left; }
-th, td { padding: 6px 10px; border-bottom: 1px solid var(--line); }
-tr:hover td { background: #fff7ed; }
-.stat { font-size: 2.5rem; font-weight: 700; color: var(--accent); }
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(900px 420px at 0% -10%, var(--accent-soft), transparent),
+    var(--paper);
+  line-height: 1.55;
+}
+
+header,
+main,
+footer {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* Header and nav */
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 24px;
+  padding-top: 20px;
+}
+.brand {
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  text-decoration: none;
+}
+.brand span {
+  color: var(--accent);
+}
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+}
+nav a {
+  color: var(--ink);
+  text-decoration: none;
+  padding: 4px 0;
+  border-bottom: 2px solid transparent;
+  transition:
+    border-color 0.15s,
+    color 0.15s;
+}
+nav a:hover,
+nav a:focus-visible {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+nav a.current {
+  border-bottom-color: var(--accent);
+  font-weight: 600;
+}
+
+/* Type */
+h1 {
+  font-size: clamp(1.9rem, 4.2vw, 2.9rem);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin: 24px 0 12px;
+  max-width: 22ch;
+}
+h2 {
+  font-size: clamp(1.3rem, 2.4vw, 1.7rem);
+  letter-spacing: -0.01em;
+  margin: 40px 0 8px;
+}
+h3 {
+  font-size: 1.05rem;
+  margin: 0 0 6px;
+}
+p {
+  margin: 0 0 14px;
+}
+.lede {
+  font-size: 1.15rem;
+  color: var(--muted);
+  max-width: 62ch;
+}
+.sub {
+  color: var(--muted);
+  font-size: 0.85em;
+}
+.kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 0;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+a:hover,
+a:focus-visible {
+  color: var(--ink);
+}
+
+/* Cards and grids */
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  min-width: 0;
+}
+.card:hover {
+  border-color: #d3cbbb;
+}
+.grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+}
+.stats {
+  margin: 24px 0;
+}
+.stat {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.list {
+  padding-left: 1.2em;
+}
+.list li {
+  margin-bottom: 8px;
+}
+
+/* Draft markers for things a teammate still owes */
+.need {
+  background: #fef3c7;
+  border: 1px dashed #d97706;
+  border-radius: 6px;
+  padding: 1px 6px;
+  font-size: 0.9em;
+}
+
+/* Data sections */
+.section-head {
+  margin-top: 56px;
+  padding-top: 16px;
+  border-top: 2px solid var(--ink);
+}
+.charts {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  margin: 16px 0;
+}
+.chart-box {
+  position: relative;
+  height: 300px;
+}
+.chart-box.tall {
+  height: 520px;
+}
+.chart-note {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 10px 0 0;
+}
+
+/* Tables */
+.tbl {
+  max-height: 460px;
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--card);
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.9rem;
+}
+caption {
+  caption-side: top;
+  text-align: left;
+  padding: 10px 12px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+th {
+  position: sticky;
+  top: 0;
+  background: var(--ink);
+  color: #fff;
+  text-align: left;
+  font-weight: 600;
+}
+th,
+td {
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--line);
+  white-space: nowrap;
+}
+tbody tr:hover td {
+  background: var(--accent-soft);
+}
+
+/* Resources */
+.resources {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+}
+.resources .type {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* Feeds */
+code {
+  background: #efeae0;
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-size: 0.88em;
+  word-break: break-word;
+}
+
+footer {
+  color: var(--muted);
+  font-size: 0.85rem;
+  padding-bottom: 40px;
+  margin-top: 48px;
+  border-top: 1px solid var(--line);
+}
