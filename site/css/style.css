@@ -6,16 +6,21 @@
 
 @font-face {
     font-family:"Museo Moderno";
-    src: url(MuseoModerno/MuseoModerno-VariableFont_wght.ttf);
+    src: url("MuseoModerno/MuseoModerno-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
 }
 @font-face {
     font-family:"Glacial Indifference";
-    src: url(glacial-indifference/GlacialIndifference-Regular.otf);
+    src: url("glacial-indifference/GlacialIndifference-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
 }
 @font-face {
     font-family:"Glacial Indifference";
-    src: url(glacial-indifference/GlacialIndifference-Bold.otf);
-    font-weight:bold;
+    src: url("glacial-indifference/GlacialIndifference-Bold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
 }
    
 :root {
